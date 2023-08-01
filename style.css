@@ -37,6 +37,8 @@ h1{
   text-align: center;
 }
 
+/* #region || gallery */
+
 .gallery{
   display: flex;
   width: 100%;
@@ -44,7 +46,73 @@ h1{
 
 .gallery-card{
   color: var(--font-color-1);
+  text-align: center;
   background-color: var(--secondary-color);
   margin: 10px;
   padding: 10px;
 }
+
+/* #endregion */
+
+/* #region || feedback */
+
+/* Style the cards */
+
+/* Cards Container */
+.feedback{
+  display: flex;
+}
+
+/* Cards */
+/* Title */
+.feedback-card {
+  background-color: var(--secondary-color);
+  color: var(--font-color-1);
+  margin: 10px;
+  padding: 20px;
+}
+/* Description */
+
+/* Style the Form on the Feedback Page */
+.feedback-form {
+  margin: auto 20% ;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  font: var(--font);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+input[type=checkbox] {
+  font: var(--font);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  margin-right: 100%;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: var(--secondary-color);
+  color: var(--font-color-1);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* #endregion */
