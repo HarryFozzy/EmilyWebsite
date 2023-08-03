@@ -1,17 +1,25 @@
 :root{
-  --primary-color: #ff5;
-  --secondary-color: #000;
-  --tertiary-color: #934;
-  --font-color: #000;
-  --font-color-1: #fff;
+  --primary-color: #ede7db;
+  --secondary-color: #d7d8c6;
+  --tertiary-color: #91988a;
+  --font-color: #0d0d0d;
+  --font-color-1: #ede7db;
+  --font: ;
 }
 
 body{
   display: block;
+  background-color: var(--primary-color);
+
+}
+
+a {
+  text-decoration: none;
 }
 
 header{
   background-color: var(--primary-color);
+  color: var(--tertiary-color);
   margin: auto;
   padding: 30px;
   font-size: 75px;
@@ -19,7 +27,7 @@ header{
 }
 
 nav{
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   width: 100%;
   font-size: 20px;
   padding: 30px 0;
@@ -29,11 +37,17 @@ nav{
 nav a {
   margin: auto;
   padding: 30px;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+nav a:hover {
+  color: var(--secondary-color);
 }
 
 h1{
   font-size: 50px;
+  color: var(--tertiary-color);
   text-align: center;
 }
 
@@ -41,13 +55,15 @@ h1{
 
 .gallery{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 
 .gallery-card{
   color: var(--font-color-1);
   text-align: center;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   margin: 10px;
   padding: 10px;
 }
@@ -61,12 +77,14 @@ h1{
 /* Cards Container */
 .feedback{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Cards */
 /* Title */
 .feedback-card {
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   color: var(--font-color-1);
   margin: 10px;
   padding: 20px;
@@ -78,12 +96,19 @@ h1{
   margin: auto 20% ;
 }
 
+/* Style the caption of each input */
+label {
+  font: var(--font);
+  color: var(--tertiary-color);
+}
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text],
 select,
 textarea {
   width: 100%;
   font: var(--font);
+  color: var(--secondary-color);
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -93,6 +118,7 @@ textarea {
   resize: vertical
 }
 
+/* Styling only required for a checkbox */
 input[type=checkbox] {
   font: var(--font);
   padding: 12px;
