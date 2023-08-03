@@ -10,7 +10,6 @@
 body{
   display: block;
   background-color: var(--primary-color);
-
 }
 
 a {
@@ -49,6 +48,11 @@ h1{
   font-size: 50px;
   color: var(--tertiary-color);
   text-align: center;
+}
+
+/* Form Styles */
+.form {
+  margin: auto 20% ;
 }
 
 /* #region || gallery */
@@ -90,11 +94,6 @@ h1{
   padding: 20px;
 }
 /* Description */
-
-/* Style the Form on the Feedback Page */
-.feedback-form {
-  margin: auto 20% ;
-}
 
 /* Style the caption of each input */
 label {

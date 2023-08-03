@@ -20,8 +20,10 @@
     <a href="feedback.html">Feedback</a>
     <a href="rates.html">Prices</a>
     <a href="terms.html">Terms & Conditions</a>
-    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="../Icons/instagram1.png" alt="InstagramLogo"></a>
-    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="../Icons/instagram2.png" alt="InstagramLogo"></a>
+    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="../Icons/instagram1.png"
+        alt="InstagramLogo"></a>
+    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="../Icons/instagram2.png"
+        alt="InstagramLogo"></a>
   </nav>
   <h1>Feedback</h1>
 
@@ -38,30 +40,31 @@
     </div>
 
   </div>
+  <div class="form">
+    <form class="feedback-form" name="FeedbackForm" method="POST" data-netlify="true" action="/HTML/success.html">
 
-  <form class="feedback-form" name="FeedbackForm" method="POST" data-netlify="true" action="/HTML/success.html">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="lastname" placeholder="example@email.com">
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="lastname" placeholder="example@email.com">
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <label for="feedback">Feedback</label>
-    <textarea id="feedback" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <div id="submit-container">
-      <button class="learn-more submitted">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">Submit</span>
-      </button>
-    </div>
-  </form>
+      <div id="submit-container">
+        <button class="learn-more submitted">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Submit</span>
+        </button>
+      </div>
+    </form>
+  </div>
 
 </body>
 
