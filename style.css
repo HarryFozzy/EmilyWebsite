@@ -4,7 +4,9 @@
   --tertiary-color: #91988a;
   --font-color: #0d0d0d;
   --font-color-1: #ede7db;
-  --font: ;
+  --font:  'Abhaya Libre', serif, 'Borel', cursive;
+  --header-font: 'Angella White Personal use font', sans-serif;
+  ;
 }
 
 body{
@@ -20,34 +22,66 @@ header{
   background-color: var(--primary-color);
   color: var(--tertiary-color);
   margin: auto;
-  padding: 30px;
   font-size: 75px;
   text-align: center;
+  font-family: var(--header-font);
+}
+
+header img {
+  margin: 0 auto;
+  width: 20%;
+  height: auto;
 }
 
 nav{
   background-color: var(--primary-color);
   width: 100%;
   font-size: 20px;
-  padding: 30px 0;
+  padding: 10px 0;
   margin: auto;
+  font-family: var(--font);
+  text-align: center;
 }
 
 nav a {
   margin: auto;
-  padding: 30px;
+  padding: 10px 20px;
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+}
+
+nav a.selected {
+  color: var(--secondary-color);
 }
 
 nav a:hover {
   color: var(--secondary-color);
 }
 
+.page-break {
+  background-color: var(--tertiary-color);
+  height: 2px;
+  width: 98%;
+  margin: 0 auto;
+}
+
 h1{
-  font-size: 50px;
+  font-size: 100px;
+  margin: 10px;
   color: var(--tertiary-color);
   text-align: center;
+  font-family: var(--header-font);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about img {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
 }
 
 /* Form Styles */
@@ -57,7 +91,7 @@ h1{
 
 /* #region || gallery */
 
-.gallery{
+.gallery-cards{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,6 +104,20 @@ h1{
   background-color: var(--tertiary-color);
   margin: 10px;
   padding: 10px;
+  border-radius: 20px;
+  transition: scale 0.5s;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  height: 400px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.gallery-card:hover {
+  scale: 1.05;
+  transition: scale 0.5s;
 }
 
 /* #endregion */

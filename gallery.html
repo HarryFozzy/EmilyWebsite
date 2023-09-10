@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FAVICON GOES HERE -->
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Borel&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+  <title>Emily Photography</title>
+</head>
+
+<body>
+  <header>
+    <!-- Picture This -->
+    <img src="/Logos/Logo-circle-cropped.png" alt="Logo">
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="rates.html">Prices</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="/Icons/instagram1.png"
+        alt="InstagramLogo"></a>
+    <a href="https://www.instagram.com/picturethisbyemily/" target="_blank"><img src="/Icons/instagram2.png"
+        alt="InstagramLogo"></a>
+  </nav>
+  <div class="page-break"></div>
+
+  <h1>Galleries</h1>
+
+  <div class="gallery-cards">
+
+    <div id="FamilyPortraits" class="gallery-card">
+      <h2>Family Portraits</h2>
+      <img src="/Gallery/FamilyPortraits/1.jpg">
+    </div>
+
+    <div id="BirthdaySessions" class="gallery-card">
+      <h2>Birthday Sessions</h2>
+      <img src="/Gallery/BirthdaySessions/1.jpg">
+    </div>
+
+    <div id="CoupleShoots" class="gallery-card">
+      <h2>Couple Shoots</h2>
+      <img src="/Gallery/CoupleShoots/1.jpg">
+    </div>
+
+    <div id="Maternity" class="gallery-card">
+      <h2>Maternity</h2>
+      <img src="/Gallery/Maternity/1.jpg">
+    </div>
+
+    <div id="Newborn" class="gallery-card">
+      <h2>Newborn</h2>
+      <img src="/Gallery/Newborn/1.jpg">
+    </div>
+
+    <div id="Pets" class="gallery-card">
+      <h2>Pets</h2>
+      <img src="/Gallery/Pets/1.jpg">
+    </div>
+
+    <div id="Portraits" class="gallery-card">
+      <h2>Portraits</h2>
+      <img src="/Gallery/Portraits/1.jpg">
+    </div>
+
+    <div id="Seasonal" class="gallery-card">
+      <h2>Seasonal</h2>
+      <img src="/Gallery/Seasonal/1.jpg">
+    </div>
+
+    <div id="SittorSessions" class="gallery-card">
+      <h2>Sitter Sessions</h2>
+      <img src="/Gallery/SitterSession/1.jpg">
+    </div>
+
+  </div>
+
+  <script>
+    //adds click even listener to the gallery buttons
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    galleryCards.forEach(element => {
+      element.addEventListener('click', function() {
+        //get the id of the clicked element
+        const gallery = this.getAttribute('id')
+  
+        //redirect the page to the correct gallery
+        window.location.href = '/Gallery/' + gallery + '.html';
+      })
+    });
+  </script>
+
+</body>
+
+
+
+</html>
