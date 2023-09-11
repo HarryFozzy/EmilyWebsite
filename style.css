@@ -35,12 +35,13 @@ header img {
 
 nav{
   background-color: var(--primary-color);
-  width: 100%;
+  width: 800px;
   font-size: 20px;
   padding: 10px 0;
   margin: auto;
   font-family: var(--font);
   text-align: center;
+  display: flex;
 }
 
 nav a {
@@ -48,14 +49,32 @@ nav a {
   padding: 10px 20px;
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 
-nav a.selected {
+/* nav a.selected {
   color: var(--secondary-color);
+} */
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: var(--tertiary-color);
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
-nav a:hover {
-  color: var(--secondary-color);
+nav a:hover::after,
+nav a:focus::after {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
 .page-break {
