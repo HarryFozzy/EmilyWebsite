@@ -208,3 +208,20 @@ input[type=submit] {
 }
 
 /* #endregion */
+
+
+/* #region || photo gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1290px;
+}
+
+.gallery img {
+  margin: 10px;
+  width: 300px;
+  height: auto;
+}
+
+/* #endregion */

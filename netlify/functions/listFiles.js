@@ -3,7 +3,7 @@ const { resolve } = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    const folderPath = './Gallery/CoupleShoots';
+    const folderPath = event.queryStringParameters.folderPath;
     const files = fs.readdirSync(folderPath);
     return {
       statusCode: 200,
