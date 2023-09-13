@@ -4,7 +4,7 @@ const fullPath = document.location.pathname.toLowerCase();
 // Extract the file name from the path
 const galleryName = fullPath.split('/').pop().split('.');
 
-const folderPath = './assets/' + galleryName[0] + '/'; // Replace with the folder path you want to use
+const folderPath = 'https://moonlit-swan-21a8f2.netlify.app/assets/' + galleryName[0] + '/'; // Replace with the folder path you want to use
 
 fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)}`)
 .then(response => response.json())
@@ -26,3 +26,15 @@ fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)
   .catch(error => {
     console.error(error);
   });
+
+// const fs = import('fs');
+
+// const images = fs.readdirSync(folderPath);
+
+// images.forEach(image => {
+//   const html = document.createElement("img");
+//         html.setAttribute("src", "../assets/" + galleryName[0] + "/" + image);
+//         gallery.appendChild(html);
+  
+//         console.log(image)
+// })
