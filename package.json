@@ -4,10 +4,5 @@
   },
   "devDependencies": {
     "netlify-cli": "^16.3.1"
-  },
-
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/https://github.com/HarryFozzy/EmilyWebsite.git"
   }
 }

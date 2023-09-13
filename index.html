@@ -41,18 +41,6 @@
     </div>
     <img src="" alt="">
   </main>
-
-  <script>
-    fetch(`/.netlify/functions/listDirectory?folderPath=${encodeURIComponent(folderPath)}`)
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the directory structure data
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  </script>
 </body>
 
 </html>
