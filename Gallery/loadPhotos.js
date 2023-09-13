@@ -4,7 +4,7 @@ const fullPath = document.location.pathname.toLowerCase();
 // Extract the file name from the path
 const galleryName = fullPath.split('/').pop().split('.');
 
-const folderPath = './assets/' + galleryName[0]; // Replace with the folder path you want to use
+const folderPath = './assets/' + galleryName[0] + '/'; // Replace with the folder path you want to use
 
 fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)}`)
 .then(response => response.json())
