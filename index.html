@@ -43,7 +43,7 @@
   </main>
 
   <script>
-    fetch('/.netlify/functions/listDirectory')
+    fetch(`/.netlify/functions/listDirectory?folderPath=${encodeURIComponent(folderPath)}`)
       .then((response) => response.json())
       .then((data) => {
         // Handle the directory structure data

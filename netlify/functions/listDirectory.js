@@ -3,7 +3,7 @@ const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    const directoryPath = './netlify'; // Specify the directory you want to list
+    const directoryPath = event.queryStringParameters.folderPath;; // Specify the directory you want to list
 
     // Use fs.readdirSync to list files and directories
     const entries = fs.readdirSync(directoryPath, { withFileTypes: true });
