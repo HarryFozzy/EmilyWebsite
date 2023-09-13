@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { resolve } = require('path');
+const { resolve } = require('./assets');
 
 exports.handler = async (event, context) => {
   try {
