@@ -1,10 +1,8 @@
 // Get the full path to the HTML document
-const fullPath = document.location.pathname.toLowerCase();
+const URL_QUERY = new URLSearchParams(window.location.search);
+const QUERY_GALLERY_NAME = URL_QUERY.get("Gallery");
 
-// Extract the file name from the path
-const galleryName = fullPath.split('/').pop().split('.');
-
-const folderPath = '../../assets/' + galleryName[0] + '/'; // Replace with the folder path you want to use
+const folderPath = './assets/' + QUERY_GALLERY_NAME; // Replace with the folder path you want to use
 
 fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)}`)
 .then(response => response.json())
@@ -16,7 +14,7 @@ fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)
 
     for (let i = 0; i < data.length; i++) {
       const html = document.createElement("img");
-      html.setAttribute("src", "../assets/" + galleryName[0] + "/" + data[i]);
+      html.setAttribute("src", "../assets/" + QUERY_GALLERY_NAME + "/" + data[i]);
       gallery.appendChild(html);
 
       console.log(data[i])
@@ -33,7 +31,7 @@ fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)
 
 // images.forEach(image => {
 //   const html = document.createElement("img");
-//         html.setAttribute("src", "../assets/" + galleryName[0] + "/" + image);
+//         html.setAttribute("src", "../assets/" + QUERY_GALLERY_NAME + "/" + image);
 //         gallery.appendChild(html);
   
 //         console.log(image)

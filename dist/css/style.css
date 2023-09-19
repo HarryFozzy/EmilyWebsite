@@ -55,10 +55,6 @@ nav a {
   overflow: hidden;
 }
 
-/* nav a.selected {
-  color: var(--secondary-color);
-} */
-
 nav a::after {
   content: '';
   position: absolute;
