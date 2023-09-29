@@ -13,11 +13,12 @@ fetch(`/.netlify/functions/listFiles?folderPath=${encodeURIComponent(folderPath)
     const gallery = document.getElementById('gallery')
 
     for (let i = 0; i < data.length; i++) {
-      const html = document.createElement("img");
-      html.setAttribute("src", "../assets/" + QUERY_GALLERY_NAME + "/" + data[i]);
-      gallery.appendChild(html);
+      const div = document.createElement("div")
+      const img = document.createElement("img");
+      img.setAttribute("src", "../assets/" + QUERY_GALLERY_NAME + "/" + data[i]);
+      div.appendChild(img);
+      gallery.appendChild(div);
 
-      console.log(data[i])
     }
 
   })
