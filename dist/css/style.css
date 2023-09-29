@@ -73,6 +73,10 @@ nav a:focus::after {
   transition: opacity 300ms;
 }
 
+nav a.selected::after {
+  opacity: 1;
+}
+
 .page-break {
   background-color: var(--tertiary-color);
   height: 2px;
